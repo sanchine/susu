@@ -1,7 +1,9 @@
 import java.io.FileReader;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 
@@ -43,11 +45,13 @@ public class Main {
       else wordsCount.put(word, wordsCount.get(word) + 1);
     }
 
-    wordsCount
-        .entrySet().stream()
-        .sorted(Map.Entry.<String, Integer>comparingByValue().reversed())
-        .limit(20)
-        .forEach(entry -> System.out.println(entry.getKey() + ": " + entry.getValue()));
+    List<Map.Entry<String, Integer>> entries = new ArrayList<>(wordsCount.entrySet());
+    entries.sort(Map.Entry.<String, Integer>comparingByValue().reversed());
+
+    for (int i = 0; i < Math.min(20, entries.size()); i++) {
+        Map.Entry<String, Integer> entry = entries.get(i);
+        System.out.println(entry.getKey() + ": " + entry.getValue());
+    }
 
   }
 }
