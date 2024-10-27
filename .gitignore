@@ -1,3 +1,7 @@
 venv
 mnist.pkl.gz
 git-token.txt
+venv
+
+__pycache__
+
