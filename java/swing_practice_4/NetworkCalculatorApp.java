@@ -1,36 +1,37 @@
 import javax.swing.*;
 
+
 public class NetworkCalculatorApp {
     public static void main(String[] args) {
         JFrame mainFrame = new MainFrame();
         mainFrame.setVisible(true);
 
-        MathResolver mr = new MathResolver();
+        // MathResolver mr = new MathResolver();
 
-        double[][] precedents = {
-            {5, 3},    // (x1, x2)
-            {0.5, 0.9} // (y1, y2)
-        };
+        // double[][] precedents = {
+        //     {5, 3},    // (x1, x2)
+        //     {0.5, 0.9} // (y1, y2)
+        // };
 
-        double[][][] weights = {
-            {
-                {0.3,  // w2_11
-                -0.5}, // w2_12
-                {-0.2, // w2_21
-                0.4},  // w2_22
-            },
-            {
-                {-0.1, // w2_11
-                0.6},  // w3_12
-                {0.1,  // w3_21
-                -0.3}  // w3_22
-            }
-        };
+        // double[][][] weights = {
+        //     {
+        //         {0.3,  // w2_11
+        //         -0.5}, // w2_12
+        //         {-0.2, // w2_21
+        //         0.4},  // w2_22
+        //     },
+        //     {
+        //         {-0.1, // w2_11
+        //         0.6},  // w3_12
+        //         {0.1,  // w3_21
+        //         -0.3}  // w3_22
+        //     }
+        // };
 
-        double[][] biases = {
-            {0.2, -0.3}, // (b2_w1, b2_w2)
-            {-0.5, 0.2}  // (b3_w1, b3_w2)
-        };
+        // double[][] biases = {
+        //     {0.2, -0.3}, // (b2_w1, b2_w2)
+        //     {-0.5, 0.2}  // (b3_w1, b3_w2)
+        // };
 
 
 

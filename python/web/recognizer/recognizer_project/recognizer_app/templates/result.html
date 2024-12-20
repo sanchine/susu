@@ -1,0 +1,9 @@
+<img src="{{ image.image.url }}" alt="Recognized image">
+<p>Recognized digit: {{ predicted_digit }}</p>
+
+<form method="POST" action="{% url 'update_correctness' image.pk %}">
+    {% csrf_token %}
+    <button type="submit" name="correct" value="true">Correct</button>
+    <button type="submit" name="correct" value="false">Incorrect</button>
+    <input type="number" name="real_digit" />
+</form>
